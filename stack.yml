@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:6.0.3-alpine
+    ports:
+      - "6379:6379"
+  app:
+    image: livioribeiro/swarm-expose:latest
+    volumes:
+      - "/run/docker.sock:/run/docker.sock"
+    environment:
+      DEFAULT_DOMAIN: 127.0.0.1.nip.io
+    deploy:
+      placement:
+        constraints: ["node.role == manager"]

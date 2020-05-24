@@ -1,0 +1,9 @@
+# build cache
+__pycache__/
+*.py[cod]
+
+# pyenv
+.python-version
+
+# IDEs
+.vscode/
