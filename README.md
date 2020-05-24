@@ -27,7 +27,7 @@ To change the host for the service, add the label `expose.host=my-host`
 docker service update nginx --label-add expose.host=my-host
 ```
 
-The service will now be exposed as `http:/my-host`
+The service will now be exposed as `http://my-host`
 
 If your service publishes more than one port, swarm-expose will get the first, unless you tell which one to expose using the label `expose.port`
 
